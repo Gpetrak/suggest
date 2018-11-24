@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.views.generic.edit import FormView
-from suggest.forms import SuggestForm
-from suggest.models import Suggestion
+from crete_gis.suggest.forms import SuggestForm
+from crete_gis.suggest.models import Suggestion
 from django.template import RequestContext
 from django.http import HttpResponse
 

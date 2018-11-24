@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Suggestions</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
-    </head>
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load url from future %}
 
-    <body>
-        <h1>Προτάσεις Βελτίωσης του Crete - GIS</h1>
+{% block title %} {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+  {% block body %}
+  <h2>Προτάσεις Βελτίωσης του Crete - GIS</h2>
+  <hr>
+
         <div class="container">
+
             <div class="row">
+
                 {% block content %}{% endblock %}
+
             </div>
+
         </div>
 
-        <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-        <script language="javascript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  {% endblock body %}
+  {% block sidebar %}{% endblock sidebar %}
+{% endblock body_outer %}
 
-    </body>
-</html>

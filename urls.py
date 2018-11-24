@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from suggest.views import SuggestView
+from crete_gis.suggest.views import SuggestView
 
 urlpatterns = patterns('',
     # Suggest
