@@ -1,0 +1,13 @@
+{% extends "suggest/base.html" %}
+
+{% block content %}
+    {% if result == 'success' %}
+        {{ result }}
+        <p>Η υποβολή των προτάσεων ήταν επιτυχής !</p>
+        <p>Ευχαριστούμε !</p>
+    {% endif %}
+    {% if result == 'failed' %}
+        <p>Η υποβολή των προτάσεων απέτυχε...</p>
+        <p>Ξαναπροσπαθήστε αργότερα.</p>
+    {% endif %}
+{% endblock %}

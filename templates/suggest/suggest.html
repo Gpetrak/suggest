@@ -1,0 +1,47 @@
+{% extends "suggest/base.html" %}
+
+{% block content %}
+     <form role="form" action="/" method="post">{% csrf_token %}
+        <div class="form-group">
+            <label for="first_name">Όνομα:</label>
+            <input id="id_fname" name="first_name" type="text" class="form-control" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Επίθετο:</label>
+            <input id="id_lname" name="last_name" type="text" class="form-control" required></input>
+        </div>
+
+        <div class="form-group">
+                <label for="organisation">Υπηρεσία:</label>
+                <input id="id_organ" name="organisation" type="text" class="form-control"></input>
+        </div>
+
+        <div class="form-group">
+                <label for="area">Περιφερειακή Ενότητα:</label>
+                <input id="id_area" name="area" type="text" class="form-control"></input>
+        </div>
+
+        <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input id="id_email" name="email" type="email" class="form-control" required></input>
+        </div>
+
+        <div class="form-group">
+                <label for="date">Ημερομηνία:</label>
+                <input id="id_date" name="date" type="date" class="form-control" required></input>
+        </div>
+
+        <div class="form-group">
+                <label for="suggestion">Προτάσεις Βελτίωσης:</label>
+                <textarea class="form-control" name="suggestion" rows="10"></textarea>
+                <!-- <textarea rows="4" cols="50" name="suggestion" ></textarea> -->
+        </div>
+
+
+    
+
+        <input class="btn btn-primary" type="submit" value="Υποβολή" />
+    </form>
+
+{% endblock %}
