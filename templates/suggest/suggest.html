@@ -1,7 +1,11 @@
 {% extends "suggest/base.html" %}
 
 {% block content %}
-     <form role="form" action="/" method="post">{% csrf_token %}
+     <div class="col-sm-7">
+
+     <h4>Από τη διεπαφή αυτή μπορείτε να προτείνετε ιδέες και εφαρμογές με σκοπό
+     τη βελτίωση, την επέκταση και την εξέλιξη του Crete - GIS.</h4>
+     <form role="form" action="/suggest/" method="post">{% csrf_token %}
         <div class="form-group">
             <label for="first_name">Όνομα:</label>
             <input id="id_fname" name="first_name" type="text" class="form-control" required></input>
@@ -43,5 +47,6 @@
 
         <input class="btn btn-primary" type="submit" value="Υποβολή" />
     </form>
+  </div>
 
 {% endblock %}

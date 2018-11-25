@@ -39,12 +39,12 @@ class SuggestView(FormView):
         # check if e1 saved
         if e1.pk is None:
             result = 'failed'
-            return render_to_response('suggest/suggestResults.html', {
+            return self.render_to_response({
                 'result': result
                 })
         else:
             result = 'success'
-            return render_to_response('suggest/suggestResults.html', {
+            return self.render_to_response({
                 'result': result
                 })
 
